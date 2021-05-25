@@ -1,0 +1,22 @@
+<!--Name: dupCheck
+    Created On: 20 May 2021
+    Author: DIVYA GARG (divya.garg2@dxc.com )
+    Description: LWC Component to select candidate Type and upload csv file..-->
+<template>
+    <div class="slds-p-around_medium" style="background-color: honeydew;">
+    <lightning-combobox
+    name="candidate type"
+    label="Candidate Type"
+    value={value}
+    placeholder="Select Candidate Type"
+    options={options}
+    onchange={handleChange} ></lightning-combobox>
+
+    <p>Selected value is: {value}</p>
+
+    <lightning-input type="file" 
+            accept={acceptedFormat}
+            label="Upload File" onchange={openfileUpload}></lightning-input>
+    
+    </div>
+</template>
